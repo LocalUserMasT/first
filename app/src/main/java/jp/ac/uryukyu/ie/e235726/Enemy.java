@@ -34,7 +34,7 @@ public class Enemy extends LivingThing{
      * @param damage 受けたダメージ
      */
     public void wounded(int damage){
-        int hitPoint = getHitPoint();
+        double hitPoint = getHitPoint();
         setHitPoint(hitPoint - damage);
         if( hitPoint < 0 ) {
             setDead(true);

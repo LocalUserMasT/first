@@ -2,11 +2,11 @@ package jp.ac.uryukyu.ie.e235726;
 
 public class LivingThing {
     private String name;
-    private int hitPoint;
+    private double hitPoint;
     private int attack;
     private boolean dead;
 
-    public LivingThing(String name, int hitPoint, int attack){
+    public LivingThing(String name, double hitPoint, int attack){
         this.name = name;
         this.hitPoint = hitPoint;
         this.attack = attack;
@@ -25,11 +25,11 @@ public class LivingThing {
         return this.name;
     }
 
-    public int getHitPoint(){
+    public double getHitPoint(){
         return this.hitPoint;
     }
 
-    public void setHitPoint(int _hitPoint){
+    public void setHitPoint(double _hitPoint){
         this.hitPoint = _hitPoint;
     }
 
@@ -47,7 +47,7 @@ public class LivingThing {
         }
     }
 
-    public void wounded(int damage){
+    public void wounded(double damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
